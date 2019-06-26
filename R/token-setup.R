@@ -1,9 +1,7 @@
 library(gcalendr)
-library(here)
 
 # initial token acquisition
-cache_path <- here(".secrets")
-options(gargle_oauth_cache = cache_path)
+options(gargle_oauth_cache = here::here(".secrets"))
 
 # check it
 gargle::gargle_oauth_cache()
