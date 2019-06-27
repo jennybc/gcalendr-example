@@ -1,12 +1,10 @@
 library(gcalendr)
 
 options(
-  gargle_oauth_cache = here::here(".secrets")
-  # this should work, instead of saying `email = TRUE` in calendar_auth()
-  # I'm puzzling over this now :(
-  #gargle_oauth_email = TRUE
+  gargle_oauth_cache = here::here(".secrets"),
+  gargle_oauth_email = TRUE
 )
 
-calendar_auth(email = TRUE)
+calendar_auth()
 
 calendar_list()
